@@ -1,0 +1,26 @@
+{
+    "name": "Debian 12 Dev Container",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "args": {
+            "USERNAME": "ikuksenok",
+            "USER_UID": "1000",
+            "USER_GID": "1000"
+        }
+    },
+    "extensions": [
+        "ms-vscode.cpptools",
+        "ms-vscode.cmake-tools",
+        "ms-python.python",
+        "visualstudioexptteam.vscodeintellicode",
+        "github.vscode-pull-request-github",
+        "rust-lang.rust-analyzer",
+        "dustypomerleau.rust-syntax",
+        "swellaby.rust-pack"
+    ],
+    "postCreateCommand": "echo 'Container ready!'",
+    "remoteUser": "${localEnv:USERNAME}",
+    "mounts": [
+        "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/ilyakuksenok/.ssh,type=bind,consistency=cached"
+    ]
+}
