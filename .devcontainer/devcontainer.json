@@ -3,7 +3,7 @@
     "build": {
         "dockerfile": "Dockerfile",
         "args": {
-            "USERNAME": "ikuksenok",
+            "USERNAME": "ilyakuksenok",
             "USER_UID": "1000",
             "USER_GID": "1000"
         }
